@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="test_ke_view">
+            <field name="name">meomeo</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref='sale.view_quotation_tree_with_onboarding'/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="aaaa" />
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="test_ke_action_window">
+          <field name="name">test ke action</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">sale.order</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="test_action_1tree_view" model="ir.actions.act_window.view">
+          <field eval="1" name="sequence"/>
+          <field name="view_mode">tree</field>
+          <field name="view_id" ref="test_ke_view"/>
+          <field name="act_window_id" ref="test_ke_action_window"/>
+        </record>
+    </data>
+</odoo>

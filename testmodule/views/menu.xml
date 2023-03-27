@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <menuitem name="Demo" id="testmodule.testmodule_menu_root"/>
+
+        <menuitem name="Menu 1" id="testmodule.testmodule_menu_1" parent="testmodule.testmodule_menu_root"/>
+        <menuitem name="Menu 2" id="testmodule.testmodule_menu_2" parent="testmodule.testmodule_menu_root"/>
+
+        <!-- actions -->
+        <menuitem name="List" id="testmodule.testmodule_menu_1_list" parent="testmodule.testmodule_menu_1"
+                  action="testmodule.testmodule_action_window"/>
+        <menuitem name="List 2" id="testmodule.testmodule_menu_2_list" parent="testmodule.testmodule_menu_2"
+                  action="testmodule.test_ke_action_window"/>
+    </data>
+</odoo>

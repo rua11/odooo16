@@ -1,0 +1,85 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="testmodule_view">
+      <field name="name">testmodule</field>
+      <field name="model">testmodule</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name" />
+          <field name="gender" />
+          <field name="address" />
+          <field name="phone" />
+          <field name="state" />
+
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="testmodule_form">
+      <field name="name">testmodule</field>
+      <field name="model">testmodule</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button id="button_confirm" name="action_confirm" string="Xác Nhận" class="btn-primary" states="draft"
+              confirm="Bạn có chắc chắn rằng bạn muốn xác nhận?" type="object" />
+            <button id="button_done" name="action_done" string="Hoàn Thành" class="btn-primary" states="confirm"
+              confirm="Bạn có chắc chắn rằng bạn muốn hoàn thành?" type="object" />
+
+            <button id="button_draft" name="action_draft" string="Đặt thành bản nháp" class="btn-primary"
+              states="cancelled" type="object" />
+
+            <button id="button_cancelled" name="action_cancelled" string="Huỷ Bỏ" states="draft,confirm,done"
+              confirm="Bạn có chắc chắn rằng bạn cần huỷ bỏ?" type="object" />
+
+            <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done,cancelled" />
+          </header>
+          <sheet>
+            <group>
+              <field name="name" />
+              <field name="year" />
+              <field name="age" />
+              <field name="gender" />
+              <field name="address" />
+              <field name="phone" />
+<!--            <field name="name" placeholder="eaeae"/>-->
+<!--            <field name="value2222222" />-->
+<!--            <field name="value2" />-->
+<!--            <label for="description">Chi Tiet</label>-->
+<!--            <field name="description" />-->
+            </group>
+
+          </sheet>
+
+        </form>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="testmodule_action_window">
+      <field name="name">testmodule action</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">testmodule</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="test_action_form_view" model="ir.actions.act_window.view">
+      <field eval="2" name="sequence"/>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="testmodule_form"/>
+      <field name="act_window_id" ref="testmodule_action_window"/>
+    </record>
+
+    <record id="test_action_tree_view" model="ir.actions.act_window.view">
+      <field eval="1" name="sequence"/>
+      <field name="view_mode">tree</field>
+      <field name="view_id" ref="testmodule_view"/>
+      <field name="act_window_id" ref="testmodule_action_window"/>
+    </record>
+
+  </data>
+</odoo>
