@@ -1,9 +1,12 @@
 <odoo>
     <data>
-        <menuitem name="Demo" id="testmodule.testmodule_menu_root"/>
 
-        <menuitem name="Menu 1" id="testmodule.testmodule_menu_1" parent="testmodule.testmodule_menu_root"/>
-        <menuitem name="Menu 2" id="testmodule.testmodule_menu_2" parent="testmodule.testmodule_menu_root"/>
+<!--        <menuitem name="Không Phải Demo" id="meo"/>-->
+        <menuitem id="menu_animal" name="Animal" />
+        <menuitem id="menu_dog" name="Dog" parent="menu_animal" action='testmodule.dog_action' />
+
+        <menuitem name="Menu 1" id="testmodule.testmodule_menu_1" parent="menu_animal"/>
+        <menuitem name="Menu 2" id="testmodule.testmodule_menu_2" parent="menu_animal"/>
 
         <!-- actions -->
         <menuitem name="List" id="testmodule.testmodule_menu_1_list" parent="testmodule.testmodule_menu_1"

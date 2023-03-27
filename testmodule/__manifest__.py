@@ -20,16 +20,19 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale'],
+    'depends': ['base', 'sale', 'hr', 'board', 'g_init', 'mail'],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-
+        'views/assets.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/test_kethua_views.xml',
+        'views/transient_model_views.xml',
+        'views/base_model_views.xml',
         'views/menu.xml',
+
 
     ],
     # only loaded in demonstration mode
