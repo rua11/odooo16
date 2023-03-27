@@ -5,6 +5,7 @@ from odoo.exceptions import UserError
 
 
 
+
 class Test(models.Model):
     _name = 'testmodule'
     _inherit = ['mail.thread', 'mail.activity.mixin']

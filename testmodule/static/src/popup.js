@@ -9,4 +9,4 @@ odoo.define('testmodule.popup', function(require){
 //            return res
 //        }
     });
-});
+

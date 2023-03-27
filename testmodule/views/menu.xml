@@ -1,17 +1,16 @@
 <odoo>
     <data>
 
-<!--        <menuitem name="Không Phải Demo" id="meo"/>-->
-        <menuitem id="menu_animal" name="Animal" />
-        <menuitem id="menu_dog" name="Dog" parent="menu_animal" action='testmodule.dog_action' />
+        <menuitem id="menu_animal" name="Demo Odoo 16" />
+        <menuitem id="menu_dog" name="Animal" parent="menu_animal" action='testmodule.dog_action' />
 
-        <menuitem name="Menu 1" id="testmodule.testmodule_menu_1" parent="menu_animal"/>
-        <menuitem name="Menu 2" id="testmodule.testmodule_menu_2" parent="menu_animal"/>
+        <menuitem name="Menu Create Model" id="testmodule.testmodule_menu_1" parent="menu_animal"/>
+        <menuitem name="Menu Inherit" id="testmodule.testmodule_menu_2" parent="menu_animal"/>
 
         <!-- actions -->
-        <menuitem name="List" id="testmodule.testmodule_menu_1_list" parent="testmodule.testmodule_menu_1"
+        <menuitem name="Model Demo" id="testmodule.testmodule_menu_1_list" parent="testmodule.testmodule_menu_1"
                   action="testmodule.testmodule_action_window"/>
-        <menuitem name="List 2" id="testmodule.testmodule_menu_2_list" parent="testmodule.testmodule_menu_2"
+        <menuitem name="Sale Inherit" id="testmodule.testmodule_menu_2_list" parent="testmodule.testmodule_menu_2"
                   action="testmodule.test_ke_action_window"/>
     </data>
 </odoo>

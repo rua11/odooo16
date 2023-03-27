@@ -6,8 +6,8 @@ class Testmodule(http.Controller):
     @http.route('/testmodule/testmodule',  auth='none', methods=['GET'], type='http', cors='*')
     def index(self, **kw):
         print('meo meo meo')
-        a = 'caca'
-        return "Hello, world", a
+        abc = 'caca'
+        return "Hello, world", abc
 
 #     @http.route('/testmodule/testmodule/objects', auth='public')
 #     def list(self, **kw):
