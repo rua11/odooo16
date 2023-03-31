@@ -10,7 +10,7 @@
           <field name="name" />
           <field name="gender" />
           <field name="address" />
-          <field name="phone" />
+          <field name="phone" widget="char" options="{'format': 0}"/>
           <field name="state" />
 
         </tree>
@@ -38,16 +38,20 @@
           </header>
           <sheet>
             <group>
+                <field name="img_test" />
+            </group>
+            <group>
               <field name="name" />
-              <field name="year" />
-              <field name="age" />
+              <field name="year" widget="char" options="{'format': 0}"/>
+              <field name="year2" />
+              <field name="age" widget="char" options="{'format': 0}"/>
               <field name="gender" />
               <field name="province_id" />
               <field name="district_id" />
               <field name="ward_id" />
 
               <field name="address" />
-              <field name="phone" />
+              <field name="phone" widget="char" options="{'format': 0}"/>
 <!--            <field name="name" placeholder="eaeae"/>-->
 <!--            <field name="value2222222" />-->
 <!--            <field name="value2" />-->

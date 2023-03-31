@@ -20,12 +20,21 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'hr', 'board', 'g_init', 'mail'],
+    'depends': ['base', 'sale', 'hr', 'board', 'g_init', 'mail','web'],
+    
+    'assets': {
+    'web.assets_backend': [
+        "/testmodule/static/src/js/popup.js",
+        "/testmodule/static/src/js/mrp.js",
+        # "/testmodule/static/src/js/code_field.js",
+        "/testmodule/static/src/xml/mrp.xml",
+        # "/testmodule/static/src/js/field_widget.js"
+    ],
 
     # always loaded
     'data': [
         'security/ir.model.access.csv',
-        # 'views/assets.xml',
+        'views/dungdz_views.xml',
         'views/views.xml',
         'views/templates.xml',
         'views/test_kethua_views.xml',
@@ -35,6 +44,7 @@
 
 
     ],
+
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',

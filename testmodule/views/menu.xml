@@ -10,6 +10,8 @@
         <!-- actions -->
         <menuitem name="Model Demo" id="testmodule.testmodule_menu_1_list" parent="testmodule.testmodule_menu_1"
                   action="testmodule.testmodule_action_window"/>
+        <menuitem name="Dũng Siêu Đẹp Trai" id="testmodule.testmodule_menu_dung" parent="testmodule.testmodule_menu_1"
+                  action="testmodule.dungdz_action_window"/>
         <menuitem name="Sale Inherit" id="testmodule.testmodule_menu_2_list" parent="testmodule.testmodule_menu_2"
                   action="testmodule.test_ke_action_window"/>
     </data>

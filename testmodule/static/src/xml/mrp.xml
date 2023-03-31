@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="FieldImageURL">
+        <a>
+            <img t-att-src ="widget.url()"
+            style="
+                background: linear-gradient(red, yellow);
+                background-siez: 5em 5em;
+                background-color: #D7D7D7;
+                opacity: 1;
+                border: 1px solid #E4E4E4;
+                padding: 0.5em;"
+            t-att-name="widget.name"
+            class="img img-fluid"
+            t-att-id="widget.name"
+            />
+        </a>
+    </t>
+</templates>

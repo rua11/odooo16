@@ -14,10 +14,12 @@ class Test(models.Model):
     STATE_SELECTION = [('draft', 'Nháp'), ('confirm', 'Xác Nhận'),
                        ('done', 'Hoàn Thành'), ('cancelled', 'Hủy bỏ')]
     GENDER_SELECTION = [('male', 'Nam'), ('female', 'Nữ'), ("other", "Khác")]
-
+    img_test = fields.Binary(string="mèo méo meo")
     name = fields.Char(string="Tên", required=True)
     gender = fields.Selection(GENDER_SELECTION, string="Giới tính", required=True)
-    year = fields.Integer(string="Năm sinh", required=True)
+    # year2 = fields.Datetime(string="Năm sinh 2", default=datetime.now().strftime('%Y'))
+    year2 = fields.Datetime(string="Năm sinh 2", default=datetime(2000,1,1).strftime('%Y'))
+    year = fields.Integer(string='Năm Sinh')
     age = fields.Integer(string="Tuổi")
     province_id = fields.Many2one(comodel_name='res.province', ondelete='restrict', string='Tỉnh/Thành phố', required=True)
     district_id = fields.Many2one(comodel_name='res.district', ondelete='restrict',string='Quận/huyện', required=True)
@@ -26,14 +28,15 @@ class Test(models.Model):
     phone = fields.Integer(string="SĐT")
     state = fields.Selection(STATE_SELECTION, default='draft', string="Trạng Thái Đăng Ký")
 
-    @api.onchange('year')
+    @api.onchange('year2')
     def _age(self):
-        if self.year:
+        if self.year2:
+            a = self.year2.year
             currentYear = datetime.now().year
-            if self.year >= currentYear:
-                raise UserError('Tuổi của mày không thể nhập linh tinh')
+            if a>= currentYear:
+                raise UserError('Tuổi của mày không thể  nhập linh tinh')
             else:
-                self.age = currentYear - self.year
+                self.age = currentYear - a
                 if self.age >= 18:
                     print("Đã đủ tuổi đi tù")
                 else:

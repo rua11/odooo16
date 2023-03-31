@@ -1,0 +1,9 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <template>
+        <xpath id="assets" inherit=>
+            <script type="text/javascript" src=""></script>
+        </xpath>
+    </template>
+</odoo> -->
