@@ -367,12 +367,12 @@ msgstr ""
 #. module: testmodule
 #: model:ir.model.fields,field_description:testmodule.field_testmodule__year
 msgid "Năm Sinh"
-msgstr ""
+msgstr "出生年份"
 
 #. module: testmodule
 #: model:ir.model.fields,field_description:testmodule.field_testmodule__year2
 msgid "Năm sinh 2"
-msgstr ""
+msgstr "出生年份 2"
 
 #. module: testmodule
 #: model:ir.model.fields.selection,name:testmodule.selection__testmodule__gender__female

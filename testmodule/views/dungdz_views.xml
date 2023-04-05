@@ -7,16 +7,21 @@
         <form>
           <sheet>
             <group>
-                <field name="video_dz" filename="document_fname" widget="binary"/>
-                <field name="document_fname" invisible="1"/>
+                <field name="video_dz" widget="video_preview"/>
+                <!-- <field name="document_fname" invisible="1"/> -->
+
+
                 <field name="document_f" widget="gm_image_href"/>
-                <field name="document_fa" widget="code2"/>
+                <field name="document_fa" widget="code2" readonly="1"/>
                 <field name="document_fa1" widget="markdown"/>
-
-
+                <!-- <t t-call="template1">
+                    <em>content</em> 
+                </t> -->
                 <!-- <field name="video_url"/>
                 <field name="embed_code" class="mt-2" /> -->
                 <field name="pdf_dz" widget="pdf_viewer"/>
+                <field name="video_file"/>
+                <field name="video_preview" widget="video_preview" readonly="1"/>
 
             </group>
           </sheet>

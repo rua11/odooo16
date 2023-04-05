@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template1">
+    <t t-name="VideoPreview">
+        <a>
+            <video width="320" height="240" controls>
+                <source t-att-src ="video.mp4" type="video/mp4">
+            </video>
+        </a>
+    </t>
+</templates>

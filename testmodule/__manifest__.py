@@ -25,12 +25,20 @@
     'assets': {
     'web.assets_backend': [
         "/testmodule/static/src/js/popup.js",
-        "/testmodule/static/src/js/mrp.js",
+        # "/testmodule/static/src/js/test_owl.js",
+        # "/testmodule/static/src/js/mrp.js",
         # "/testmodule/static/src/js/code_field.js",
-        "/testmodule/static/src/xml/mrp.xml",
-        # "/testmodule/static/src/js/field_widget.js"
+        # "/testmodule/static/src/xml/mrp.xml",
+        # "/testmodule/static/src/js/field_widget.js",
+        # "/testmodule/static/src/xml/code_field.xml",
     ],
-
+    #  "web.assets_qweb": [
+    #     "/testmodule/static/src/xml/mrp.xml",
+    #     "testmodule/static/src/xml/qweb_template.xml",
+    #     ]
+     
+    },
+    
     # always loaded
     'data': [
         'security/ir.model.access.csv',
@@ -41,6 +49,7 @@
         'views/transient_model_views.xml',
         'views/base_model_views.xml',
         'views/menu.xml',
+        # 'views/template_video.xml'
 
 
     ],

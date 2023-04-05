@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<templates id="template" xml:space="preserve">
+
+<templates xml:space="preserve"> 
+    <t t-name="productVideo"> 
+        <div class="embed-responsive embed-responsive-16by9 " t-if="embedCode"> 
+            <t t-raw="embedCode"/> 
+        </div> 
+    </t> 
+</templates>
+<!-- <templates id="template" xml:space="preserve">
 
     <t t-name="testmodule.CodeField" owl="1">
-        <t t-if="props.readonly">
+        <!-- <t t-if="props.readonly">
             <pre t-esc="props.value" class="bg-primary text-white p-3 rounded"/>
         </t>
         <t t-else="">
             <textarea class="o_codeview" t-att-value="props.value"/>
-        </t>
+        </t> -->
+        <video width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+
+        </video>
     </t>
-</templates>
+</templates> -->
+
