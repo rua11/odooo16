@@ -25,15 +25,14 @@ class Testmodule(Controller):
         print(type(c))
         print(type(d))
         return d
-    
-    @http.route('/get_data_by_id', auth='none', methods=['GET'], type='http', cors='*')
+    #get data by language
+    @http.route('/get_data', auth='none', methods=['GET'], type='json', cors='*')
     def get_data_by_id(self,**kw):
-        a = request.env['dungdz'].sudo().browse(18)
-        d = base64.b64decode(a.video_dz)
-        fh = open("video1.mp4", "wb")
-        fh.write(base64.b64decode(d))
-        fh.close()
-        return fh
+        data = request.env['dungdz'].sudo().browse(31).with_context(lang='vi_VN').document_fa1
+        res = {
+            "data" : data
+        }
+        return res
 
 
 #     @http.route('/testmodule/testmodule/objects', auth='public')

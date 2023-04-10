@@ -19,6 +19,7 @@ class DungDz(models.Model):
     document_f = fields.Char(string="Cat")
     document_fa = fields.Char(string="Dog", translate=True)
     document_fa1 = fields.Text(string="Monkey", translate=True)
+    data_transalte = fields.Char(string="Xuất bản dịch")
     # state = fields.Selection(STATE_SELECTION, default='draft', string="Trạng Thái Đăng Ký", translate = True)
     
     # def decode_binary(self):
@@ -26,21 +27,24 @@ class DungDz(models.Model):
     #         base64.b64decode(self.pdf_dz)
     
     
-    video_file = fields.Binary(string='Video File')
-    video_preview = fields.Binary(string='Video Preview', compute='_compute_video_preview', store=True)
+    video_preview = fields.Binary(string='video_preview')
+    file_name = fields.Char('File Name')
+    
+    # video_file = fields.Binary(string='Video File')
+    # video_preview = fields.Binary(string='Video Preview', compute='_compute_video_preview', store=True)
 
-    @api.onchange('video_file')
-    def _compute_video_preview(self):
-            if self.video_file:
-                video_preview = self.env['ir.attachment'].search([('res_model', '=', 'dungdz'), ('res_id', '=', self.id), ('name', 'ilike', 'video_preview')], limit=1)
-            if not video_preview:
-                video_preview = self.env['ir.attachment'].create({
-                'name': 'video_preview',
-                'datas': self.env['video.converter'].convert(self.video_file),
-                'res_model': 'dungdz',
-                'res_id': self.id,
-                })
-            self.video_preview = video_preview.datas if video_preview else False
+    # @api.onchange('video_file')
+    # def _compute_video_preview(self):
+    #         if self.video_file:
+    #             video_preview = self.env['ir.attachment'].search([('res_model', '=', 'dungdz'), ('res_id', '=', self.id), ('name', 'ilike', 'video_preview')], limit=1)
+    #         if not video_preview:
+    #             video_preview = self.env['ir.attachment'].create({
+    #             'name': 'video_preview',
+    #             'datas': self.env['video.converter'].convert(self.video_file),
+    #             'res_model': 'dungdz',
+    #             'res_id': self.id,
+    #             })
+    #         self.video_preview = video_preview.datas if video_preview else False
             
     @api.onchange('document_fname')
     def decode_binary1(self):
@@ -51,7 +55,16 @@ class DungDz(models.Model):
             fh.close()
             
             # return open("video.mp4", "wb")
+    @api.onchange('document_fa1')
+    def xuat(self):
+        if self.document_fa1:
             
+           
+            self.data_transalte = self.document_fa1
+            print(self.data_transalte)
+        
+        if not self.document_fa1:
+            self.data_transalte = "Nhap noi dung di"
             
  
    
