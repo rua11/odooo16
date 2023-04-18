@@ -3,4 +3,5 @@ access_testmodule,testmodule.testmodule,model_testmodule,base.group_user,1,1,1,1
 access_dog,testmodule.dog,model_dog,base.group_user,1,1,1,1
 access_transient.model,testmodule.transient_model,model_transient_model,base.group_user,1,1,1,1
 access_dungdz,testmodule.dungdz,model_dungdz,base.group_user,1,1,1,1
+access_test.linhtinh,testmodule.test.linhtinh,model_test_linhtinh,base.group_user,1,1,1,1
 

@@ -3,6 +3,8 @@
 
         <menuitem id="menu_animal" name="Demo Odoo 16" />
         <menuitem id="menu_dog" name="Animal" parent="menu_animal" action='testmodule.dog_action' />
+        <menuitem id="menu_linhtinh" name="Linh Tinh" parent="menu_animal" action='testmodule.linhtinh_action_window' />
+        <menuitem id="menu_mail_tempalte" name="Mail Template" parent="menu_animal" action='testmodule.mail_template_action_window' />
 
         <menuitem name="Menu Create Model" id="testmodule.testmodule_menu_1" parent="menu_animal"/>
         <menuitem name="Menu Inherit" id="testmodule.testmodule_menu_2" parent="menu_animal"/>

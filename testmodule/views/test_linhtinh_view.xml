@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+     <record model="ir.ui.view" id="meo_meo_meo">
+      <field name="name">ga1</field>
+      <field name="model">test.linhtinh</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <button type="object" name="action_send_email" string="Send by email"/>
+            <button type="object" name="action_post" string="Ơ kìa"/>
+
+          </header>
+          <sheet>
+            <group>
+                <field name="name"/>
+                <field name="subject"/>
+                <field name="lt_id"/>
+                <field name="so1"/>
+                <field name="email_formm"/>
+                <field name="mail_too"/>
+            </group>
+              <!-- <div class="oe_chatter">
+                      <field name="message_follower_ids" widget="mail_followers"/>
+                      <field name="activity_ids" widget="mail_activity"/>
+                      <field name="message_ids" widget="mail_thread"/>
+              </div> -->
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="linhtinh_action_window">
+      <field name="name">Linh Tinh Detail</field>
+      <field name="res_model">test.linhtinh</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    </data>
+</odoo>

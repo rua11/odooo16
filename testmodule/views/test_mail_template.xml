@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        
+        <record id="maiz_template" model="mail.template">
+            <field name="name">DAY KHO PHAI TEMPLATE</field>
+            <field name="model_id" ref="testmodule.model_test_linhtinh"/>
+            <field name="email_from">"{{ object.email_formm }}" </field>
+            <field name="email_to">"{{ object.mail_too }}"</field>
+            <field name="subject">"{{ object.subject }}"</field>
+            <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+            <div style="margin: 0px; padding: 0px;">
+            <p style="margin: 0px; padding: 0px; font-size: 13px;">Dear<t t-out="object.name"/>,
+            <br/>
+            <br/>
+            Good job, this is our first e-mail template!
+            <br/>
+            <br/>
+            Regards,
+            <br/>
+            <t t-out="object.name"/>
+            </p>
+            </div>
+            </div>
+            </field>
+        </record>
+    </data>
+</odoo>

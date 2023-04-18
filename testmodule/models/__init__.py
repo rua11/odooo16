@@ -6,4 +6,5 @@ from . import abstract_model
 from . import base_model
 from . import transient_model
 from . import dungdz
+from . import test_linhtinh
 

@@ -112,7 +112,7 @@ msgstr ""
 #. module: testmodule
 #: model:ir.ui.menu,name:testmodule.menu_animal
 msgid "Demo Odoo 16"
-msgstr ""
+msgstr "Không phải đề mô"
 
 #. module: testmodule
 #: model:ir.model.fields,field_description:testmodule.field_dog__display_name
@@ -141,7 +141,7 @@ msgstr ""
 #. module: testmodule
 #: model:ir.ui.menu,name:testmodule.testmodule_menu_dung
 msgid "Dũng Siêu Đẹp Trai"
-msgstr ""
+msgstr "Khoai"
 
 #. module: testmodule
 #: model:ir.model.fields,field_description:testmodule.field_dungdz__document_fa

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 
 <templates xml:space="preserve"> 
     <t t-name="productVideo"> 
@@ -6,8 +6,8 @@
             <t t-raw="embedCode"/> 
         </div> 
     </t> 
-</templates>
-<!-- <templates id="template" xml:space="preserve">
+</templates> -->
+<templates id="template" xml:space="preserve">
 
     <t t-name="testmodule.CodeField" owl="1">
         <!-- <t t-if="props.readonly">
@@ -21,5 +21,5 @@
 
         </video>
     </t>
-</templates> -->
+</templates>
 

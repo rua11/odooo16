@@ -25,10 +25,11 @@ class Testmodule(Controller):
         print(type(c))
         print(type(d))
         return d
+    
     #get data by language
     @http.route('/get_data', auth='none', methods=['GET'], type='json', cors='*')
     def get_data_by_id(self,**kw):
-        data = request.env['dungdz'].sudo().browse(31).with_context(lang='vi_VN').document_fa1
+        data = request.env['dungdz'].sudo().browse(kw.get('id')).with_context(lang=kw.get('lang'))[kw.get('field')]
         res = {
             "data" : data
         }

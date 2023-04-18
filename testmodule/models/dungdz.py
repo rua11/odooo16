@@ -9,8 +9,6 @@ class DungDz(models.Model):
                        ('done', 'Hoàn Thành'), ('cancelled', 'Hủy bỏ')]
     
     video_dz = fields.Binary(string="video")
-    
-    
     document_fname = fields.Char()
     
     # video_url = fields.Char('video URL', help="URL of a video for showcasing your profile")

@@ -52,10 +52,12 @@
         'views/test_kethua_views.xml',
         'views/transient_model_views.xml',
         'views/base_model_views.xml',
+        'views/test_linhtinh_view.xml',
+        'views/test_mail_template.xml',
+        'views/test2_mail_template.xml',
+        'views/template_mail_views.xml',
         'views/menu.xml',
-        # 'views/template_video.xml'
-
-
+        
     ],
 
     # only loaded in demonstration mode
